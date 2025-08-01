@@ -74,7 +74,6 @@ button {
     height: 25px;
     font-weight: bold;
     letter-spacing: 1.4px;
-
 }
 
 .bigDiv {
@@ -85,11 +84,12 @@ button {
     height: 800px;
     outline: 5px solid black;
     background-color: rgba(216, 192, 192, 0.656);
+    user-select: none;
 }
 
 .square {
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid rgba(108, 108, 108, 0.297);
 }
 
 footer {
@@ -116,4 +116,140 @@ footer div {
     border-radius: 100px;
     margin: 0 50px;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.429);
+}
+
+@media (max-width: 1440px) {
+    .options {
+        width: 90%;
+        height: 80px;
+    }
+    label {
+        font-size: 1.6rem;
+    }
+    footer div {
+        bottom: 30px;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.429);
+    }
+}
+
+@media (max-width: 1250px) {
+    .bigDiv {
+        width: 650px;
+        height: 650px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bigDiv {
+        width: 600px;
+        height: 600px;
+    }
+    label {
+        font-size: 1.4rem;
+    }
+    
+    button {
+        width: 100px;
+        height: 25px;
+        letter-spacing: 1.4px;
+    }    
+
+    footer p {
+        font-size: 1.4rem;
+    }
+    footer div {
+        bottom: 30px;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 950px) {
+    .bigDiv {
+        width: 450px;
+        height: 450px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        height: 25vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 200px;
+    }
+
+    .bigDiv {
+        width: 400px;
+        height: 400px;
+    }
+    label {
+        font-size: 1.4rem;
+    }
+    footer {
+        height: 20vh;
+    }
+    footer p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    footer div {
+        bottom: 20px;
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 640px) {
+    .bigDiv {
+        width: 380px;
+        height: 380px;
+    }
+    footer {
+        justify-content: space-around;
+    }
+
+    footer p {
+        width: 50%;
+    }
+    footer div {
+        bottom: 20px;
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .bigDiv {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 425px) {
+    .bigDiv {
+        width: 250px;
+        height: 250px;
+    }
+    footer div {
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+    }
 }

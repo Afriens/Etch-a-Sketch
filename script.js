@@ -19,6 +19,7 @@ numbGrid.addEventListener('input', () => {
     for (let i = 0; i < total; i++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('square');
+        newDiv.setAttribute('draggable', 'false');
         newDiv.style.flex = `0 0 calc(${100 / n}%)`;
         newDiv.style.aspectRatio = '1 / 1';
 
@@ -30,7 +31,8 @@ numbGrid.addEventListener('input', () => {
         };
 
         // Permite pintar tanto al presionar como al mover con clic
-        newDiv.addEventListener('pointerdown', () => {
+        newDiv.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
             newDiv.style.backgroundColor = pickColor.value;
         });
 
